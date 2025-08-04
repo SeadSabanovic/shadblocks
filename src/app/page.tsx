@@ -1,17 +1,10 @@
-import Container from "@/components/ui/container";
+import HeroSection from "@/components/sections/hero/hero-section";
 import Page from "@/components/ui/page";
 
 export default function Home() {
   return (
     <Page>
-      <Container>
-        {/* Page header */}
-        <h1 className="text-3xl font-bold text-gray-900">Shad Blocks</h1>
-        <p className="mt-2 text-gray-600">
-          Welcome back! Here&apos;s what&apos;s happening with your projects
-          today.
-        </p>
-      </Container>
+      <HeroSection />
     </Page>
   );
 }

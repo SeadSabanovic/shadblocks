@@ -8,9 +8,7 @@ export default function Page({
   className?: string;
 }) {
   return (
-    <div
-      className={cn("container mx-auto min-h-[calc(100svh-144px)]", className)}
-    >
+    <div className={cn("min-h-[calc(100svh-144px)]", className)}>
       {children}
     </div>
   );
