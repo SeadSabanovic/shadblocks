@@ -8,18 +8,10 @@ import { NavigationMenuProps } from "@radix-ui/react-navigation-menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { NAVIGATION_LINKS } from "@/constants/navigation";
 
 export default function CustomNavigationMenu(props: NavigationMenuProps) {
   const pathname = usePathname();
-
-  const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Components", href: "/components" },
-    { name: "Blocks", href: "/blocks" },
-    { name: "Templates", href: "/templates" },
-    { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
-  ];
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -31,13 +23,13 @@ export default function CustomNavigationMenu(props: NavigationMenuProps) {
   return (
     <NavigationMenu {...props}>
       <NavigationMenuList className="space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start">
-        {navigation.map((item) => (
+        {NAVIGATION_LINKS.map((item) => (
           <NavigationMenuItem key={item.name}>
             <NavigationMenuLink asChild>
               <Link
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-2 font-bold transition-colors",
+                  "flex items-center gap-2 font-medium transition-colors",
                   isActive(item.href) ? "" : "text-foreground/60",
                 )}
               >

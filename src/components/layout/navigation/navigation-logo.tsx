@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NavigationLogo() {
   return (
-    <Link href="/">
+    <Link href="/" className="flex items-center gap-2">
       <svg
         width="40"
         height="40"
@@ -32,6 +32,8 @@ export default function NavigationLogo() {
           </linearGradient>
         </defs>
       </svg>
+
+      <h1 className="text-xl font-bold whitespace-nowrap">Shad Blocks</h1>
     </Link>
   );
 }

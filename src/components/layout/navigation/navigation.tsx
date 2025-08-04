@@ -10,11 +10,8 @@ export function Navigation() {
     <nav className="supports-backdrop-blur:bg-background/90 border-border bg-background/40 sticky top-0 z-40 mb-4 flex h-16 w-full items-center justify-between border-b backdrop-blur-lg">
       <div className="container mx-auto flex h-full items-center justify-between px-4">
         <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2">
-            {/* Logo */}
-            <NavigationLogo />
-            <h1 className="text-xl font-bold whitespace-nowrap">Shad Blocks</h1>
-          </div>
+          {/* Logo */}
+          <NavigationLogo />
 
           {/* Desktop Menu */}
           <NavigationMenu className="hidden md:block" />

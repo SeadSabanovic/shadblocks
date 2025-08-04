@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Home, ArrowLeft, Search } from "lucide-react";
+import { NAVIGATION_LINKS } from "@/constants/navigation";
+import Page from "@/components/ui/page";
 
 export default function NotFound() {
   return (
-    <div className="bg-background flex min-h-screen items-center justify-center px-4">
+    <Page className="flex items-center justify-center">
       <div className="mx-auto max-w-md text-center">
         {/* 404 Number */}
         <div className="mb-8">
@@ -67,24 +69,18 @@ export default function NotFound() {
             Try these pages instead:
           </p>
           <div className="flex flex-wrap justify-center gap-2">
-            {[
-              { href: "/", label: "Home" },
-              { href: "/blocks", label: "Blocks" },
-              { href: "/components", label: "Components" },
-              { href: "/templates", label: "Templates" },
-              { href: "/about", label: "About" },
-            ].map((link) => (
+            {NAVIGATION_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground hover:bg-muted rounded-md px-2 py-1 text-sm transition-colors"
               >
-                {link.label}
+                {link.name}
               </Link>
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </Page>
   );
 }
