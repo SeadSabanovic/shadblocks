@@ -7,35 +7,42 @@ import next from "@/assets/icons/next.svg";
 import motion from "@/assets/icons/motion.svg";
 import shadcn from "@/assets/icons/shadcn.svg";
 
+const avatarImages = [
+  {
+    src: "https://images.pexels.com/photos/2475138/pexels-photo-2475138.jpeg",
+    alt: "User avatar 1",
+  },
+  {
+    src: "https://images.pexels.com/photos/6337258/pexels-photo-6337258.jpeg",
+    alt: "User avatar 2",
+  },
+  {
+    src: "https://images.pexels.com/photos/1727659/pexels-photo-1727659.jpeg",
+    alt: "User avatar 3",
+  },
+];
+
 export default function HeroSection() {
   return (
-    <section className="mx-4 mb-4 flex min-h-[calc(100svh-100px)] flex-col rounded-2xl bg-gray-50 py-16">
+    <section className="mx-4 mb-4 flex h-[calc(100svh-100px)] max-h-[1240px] flex-col rounded-2xl bg-gray-50 py-16">
       <Container className="flex h-full flex-1 flex-col justify-center gap-4">
         {/* Hero content will go here */}
         <H1 className="text-6xl lg:text-7xl">
-          Human
-          <span className="font-light">-made</span>
-          <em className="mr-1">Shad</em>cn marketing <em>Blocks</em>{" "}
-          <span className="font-light">for your</span>
+          Human-made
+          <em className="mr-1">Shad</em>cn marketing <em>Blocks</em> for your
           <span className="ml-5 inline-flex">
-            <img
-              src="https://images.pexels.com/photos/2475138/pexels-photo-2475138.jpeg"
-              alt=""
-              className="size-12 rounded-full object-cover"
-            />
-            <img
-              src="https://images.pexels.com/photos/6337258/pexels-photo-6337258.jpeg"
-              alt=""
-              className="size-12 translate-x-[-10px] rounded-full object-cover"
-            />
-            <img
-              src="https://images.pexels.com/photos/1727659/pexels-photo-1727659.jpeg"
-              alt=""
-              className="size-12 translate-x-[-20px] rounded-full object-cover"
-            />
+            {avatarImages.map((avatar, index) => (
+              <img
+                key={avatar.src}
+                src={avatar.src}
+                alt={avatar.alt}
+                className={`bg-background size-14 rounded-full border object-cover p-1 ${
+                  index > 0 ? `translate-x-[-${index * 10}px]` : ""
+                }`}
+              />
+            ))}
           </span>
-          Next
-          <span className="font-mono font-light"> project</span>
+          Next project
         </H1>
         <H3 className="uppercase">Accessible. SEO friendly. Free forever.</H3>
         <Badge
