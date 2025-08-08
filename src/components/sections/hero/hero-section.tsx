@@ -6,6 +6,7 @@ import tw from "@/assets/icons/tw.svg";
 import next from "@/assets/icons/next.svg";
 import motion from "@/assets/icons/motion.svg";
 import shadcn from "@/assets/icons/shadcn.svg";
+import ts from "@/assets/icons/ts.svg";
 
 const avatarImages = [
   {
@@ -19,6 +20,29 @@ const avatarImages = [
   {
     src: "https://images.pexels.com/photos/1727659/pexels-photo-1727659.jpeg",
     alt: "User avatar 3",
+  },
+];
+
+const techIcons = [
+  {
+    src: tw,
+    alt: "Tailwind CSS",
+  },
+  {
+    src: shadcn,
+    alt: "shadcn/ui",
+  },
+  {
+    src: next,
+    alt: "Next.js",
+  },
+  {
+    src: ts,
+    alt: "TypeScript",
+  },
+  {
+    src: motion,
+    alt: "Motion",
   },
 ];
 
@@ -37,7 +61,11 @@ export default function HeroSection() {
                 src={avatar.src}
                 alt={avatar.alt}
                 className={`bg-background size-14 rounded-full border object-cover p-1 ${
-                  index > 0 ? `translate-x-[-${index * 10}px]` : ""
+                  index === 1
+                    ? "-translate-x-[10px]"
+                    : index === 2
+                      ? "-translate-x-[20px]"
+                      : ""
                 }`}
               />
             ))}
@@ -49,13 +77,20 @@ export default function HeroSection() {
           variant="outline"
           className="bg-background flex items-center gap-2 px-4 py-2"
         >
-          <Image width={24} height={24} src={tw} alt="Tailwind CSS" />
-          <span className="bg-muted h-9 w-[2px]" />
-          <Image width={24} height={24} src={shadcn} alt="shadcn/ui" />
-          <span className="bg-muted h-9 w-[2px]" />
-          <Image width={24} height={24} src={next} alt="Next.js" />
-          <span className="bg-muted h-9 w-[2px]" />
-          <Image width={30} height={24} src={motion} alt="Motion" />
+          {techIcons.map((icon, index) => (
+            <div key={icon.alt} className="flex items-center">
+              <Image
+                width={24}
+                height={24}
+                src={icon.src}
+                alt={icon.alt}
+                className="aspect-square"
+              />
+              {index < techIcons.length - 1 && (
+                <span className="bg-muted ml-2 h-9 w-[2px]" />
+              )}
+            </div>
+          ))}
         </Badge>
       </Container>
     </section>

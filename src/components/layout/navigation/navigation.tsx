@@ -1,9 +1,10 @@
-"use client";
-
 import NavigationMenu from "./navigation-menu";
 import NavigationSheet from "./navigation-sheet";
 import NavigationLogo from "./navigation-logo";
 import { Badge } from "@/components/ui/badge";
+import { Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Navigation() {
   return (
@@ -16,8 +17,22 @@ export function Navigation() {
           {/* Desktop Menu */}
           <NavigationMenu className="hidden md:block" />
         </div>
-        <div className="flex items-center gap-3">
-          <Badge variant="outline" className="h-9 px-4">
+        <div className="flex items-center gap-2">
+          <Link
+            href="https://github.com/SeadSabanovic/shadblocks"
+            target="_blank"
+          >
+            <Button
+              variant="outline"
+              className="bg-card/50 h-9 px-4 backdrop-blur-sm"
+            >
+              <Github />
+            </Button>
+          </Link>
+          <Badge
+            variant="outline"
+            className="bg-card/50 h-9 px-4 backdrop-blur-sm"
+          >
             v0.0.1-alpha
           </Badge>
           {/* Mobile Menu */}
