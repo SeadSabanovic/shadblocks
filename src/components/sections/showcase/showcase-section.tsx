@@ -76,6 +76,7 @@ export default function ShowcaseSection() {
                 <div className="flex items-center justify-start space-x-1.5">
                   <span className="size-3 rounded-full bg-gray-50" />
                   <span className="size-3 rounded-full bg-gray-50" />
+                  <span className="size-3 rounded-full bg-gray-50" />
                 </div>
                 <H4 className="text-md flex-1 rounded-md bg-gray-50 px-2 py-1 text-right font-mono text-sm">
                   {category.name}
@@ -94,7 +95,7 @@ export default function ShowcaseSection() {
                   height={900}
                   src={category.image}
                   alt={category.name}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="h-full w-full object-cover grayscale transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </Card>
