@@ -57,13 +57,18 @@ const blockCategories = [
 export default function ShowcaseSection() {
   return (
     <section className="mx-4 mb-4 rounded-2xl py-16">
-      <Container>
-        <div className="mb-12 text-center">
-          <H2 className="mb-4">Ready-to-Use Blocks</H2>
+      <Container className="flex items-center gap-12">
+        <div className="mb-12 max-w-2xl text-center">
+          <H2 className="mb-4 text-4xl font-black whitespace-nowrap md:text-6xl">
+            Ready-to-Use!
+          </H2>
           <P className="text-muted-foreground mx-auto max-w-2xl">
             Choose from our collection of pre-built, customizable blocks to
             accelerate your development.
           </P>
+          <Button size="lg" variant="outline" className="mt-6 text-center">
+            View All Blocks
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -100,12 +105,6 @@ export default function ShowcaseSection() {
               </div>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Button size="lg" variant="outline">
-            View All Blocks
-          </Button>
         </div>
       </Container>
     </section>

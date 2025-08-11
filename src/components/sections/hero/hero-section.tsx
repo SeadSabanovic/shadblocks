@@ -4,7 +4,7 @@ import { H1, H3 } from "@/components/ui/typography";
 import Image from "next/image";
 import tw from "@/assets/icons/tw.svg";
 import next from "@/assets/icons/next.svg";
-import motion from "@/assets/icons/motion.svg";
+import gsap from "@/assets/icons/gsap.svg";
 import shadcn from "@/assets/icons/shadcn.svg";
 import ts from "@/assets/icons/ts.svg";
 
@@ -41,8 +41,8 @@ const techIcons = [
     alt: "TypeScript",
   },
   {
-    src: motion,
-    alt: "Motion",
+    src: gsap,
+    alt: "GSAP",
   },
 ];
 

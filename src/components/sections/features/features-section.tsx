@@ -49,7 +49,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="mb-16">
+    <section className="relative mb-16 overflow-hidden">
       <Container className="grid grid-cols-1 gap-6 rounded-2xl border p-6 lg:grid-cols-3">
         <div className="relative col-span-1 flex flex-col justify-between overflow-hidden rounded-xl border p-6">
           <H2 className="mb-4 text-4xl font-black md:text-6xl">
