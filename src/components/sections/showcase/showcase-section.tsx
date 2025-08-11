@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Blocks } from "lucide-react";
 import Image from "next/image";
+import ShowcaseScrollScript from "./showcase-scroll";
 
 const blockCategories = [
   {
@@ -56,9 +57,12 @@ const blockCategories = [
 
 export default function ShowcaseSection() {
   return (
-    <section className="mx-4 mb-4 rounded-2xl py-16">
-      <Container className="flex items-center gap-12">
-        <div className="mb-12 max-w-2xl text-center">
+    <section
+      data-showcase-section
+      className="relative mb-4 overflow-hidden rounded-2xl py-16"
+    >
+      <Container data-showcase-container className="flex items-center gap-12">
+        <div className="min-h-full max-w-2xl self-stretch border-r py-12 pr-6">
           <H2 className="mb-4 text-4xl font-black whitespace-nowrap md:text-6xl">
             Ready-to-Use!
           </H2>
@@ -71,11 +75,11 @@ export default function ShowcaseSection() {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div data-showcase-track className="flex w-fit gap-6">
           {blockCategories.map((category) => (
             <Card
               key={category.name}
-              className="group relative gap-0 overflow-hidden border p-0 transition-all duration-300"
+              className="group relative min-w-[400px] gap-0 overflow-hidden border p-0 transition-all duration-300"
             >
               <CardHeader className="flex items-center gap-4 p-2!">
                 <div className="flex items-center justify-start space-x-1.5">
@@ -107,6 +111,7 @@ export default function ShowcaseSection() {
           ))}
         </div>
       </Container>
+      <ShowcaseScrollScript />
     </section>
   );
 }
