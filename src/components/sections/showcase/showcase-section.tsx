@@ -61,11 +61,8 @@ export default function ShowcaseSection() {
       data-showcase-section
       className="relative mb-4 overflow-hidden rounded-2xl py-16"
     >
-      <Container
-        data-showcase-container
-        className="flex flex-col gap-12 lg:flex-row lg:items-center"
-      >
-        <div className="bg-background relative z-10 max-w-2xl self-stretch lg:flex lg:flex-col lg:justify-center lg:border-x lg:px-8 lg:py-12">
+      <Container data-showcase-container className="flex flex-col gap-12">
+        <div className="max-w-[400px]">
           <H2 className="mb-4 text-4xl font-black whitespace-nowrap md:text-6xl">
             Ready-to-Use!
           </H2>

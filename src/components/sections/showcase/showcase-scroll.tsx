@@ -38,7 +38,6 @@ export default function ShowcaseScrollScript() {
         },
         scrub: 0.6,
         pin: true,
-        anticipatePin: 1,
         invalidateOnRefresh: true,
       },
     });

@@ -51,6 +51,8 @@ export default function FeaturesSection() {
   return (
     <section className="relative mb-16 overflow-hidden">
       <Container className="grid grid-cols-1 gap-6 rounded-2xl border p-6 lg:grid-cols-3">
+
+        
         <div className="relative col-span-1 flex flex-col justify-between overflow-hidden rounded-xl border p-6">
           <H2 className="mb-4 text-4xl font-black md:text-6xl">
             Why <br /> Shad <br /> Blocks?
@@ -59,12 +61,6 @@ export default function FeaturesSection() {
             Built for developers who want beautiful, accessible, and performant
             components without the hassle.
           </P>
-
-          <img
-            src="https://images.pexels.com/photos/7946554/pexels-photo-7946554.jpeg"
-            alt=""
-            className="absolute top-0 right-0 -z-10 h-full w-full object-cover blur-sm grayscale filter"
-          />
         </div>
 
         <div className="col-span-1 flex flex-col gap-6 p-6 lg:col-span-2">
